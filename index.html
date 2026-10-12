@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>S.M. Basit Ali | AI & ML Portfolio</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Space+Grotesk:wght@500;700&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="prog"></div><div id="cg"></div><canvas id="bg"></canvas>
+<nav>
+ <a href="#hero" class="logo">&lt;S.M.Basit Ali /&gt;</a>
+ <ul id="links">
+  <li><a href="#about">About</a></li><li><a href="#education">Education</a></li><li><a href="#skills">Skills</a></li>
+  <li><a href="#projects">Projects</a></li><li><a href="#achievements">Achievements</a></li><li><a href="#resume">Resume</a></li><li><a href="#contact">Contact</a></li>
+ </ul>
+ <div style="display:flex;gap:.6rem"><button id="theme" title="Toggle theme" aria-label="Toggle theme">◐</button><button id="menu" aria-label="Menu">☰</button></div>
+</nav>
+
+<section id="hero">
+ <div>
+  <span class="tag">● B.Tech CSE · AI &amp; ML</span>
+  <h1>Hi, I'm <span class="grad">S.M. Basit Ali</span></h1>
+  <p class="typed" id="typed"></p>
+  <p class="sub" style="margin-top:.8rem">3rd-year B.Tech Computer Science Engineering student specializing in Artificial Intelligence &amp; Machine Learning, building intelligent systems that solve real-world problems.</p>
+  <div class="cta"><a href="#projects" class="btn p">Explore My Work</a><a href="#contact" class="btn">Contact Me</a></div><div class="stats"><div><b>3rd</b><span>Year B.Tech</span></div><div><b>9</b><span>Core Skills</span></div><div><b>AI/ML</b><span>Specialization</span></div><div><b>YOLO</b><span>Flagship Project</span></div></div>
+ <div class="avatar">
+   <img src="data:image/jpeg;base64,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" alt="S.M. Basit Ali">
+ </div>
+</section>
+
+<div class="mq"><div><span>Python</span><span>C</span><span>Java</span><span>HTML</span><span>CSS</span><span>JavaScript</span><span>SQL</span><span>Machine Learning</span><span>Data Science</span><span>YOLO</span><span>Computer Vision</span><span>Python</span><span>C</span><span>Java</span><span>HTML</span><span>CSS</span><span>JavaScript</span><span>SQL</span><span>Machine Learning</span><span>Data Science</span><span>YOLO</span><span>Computer Vision</span></div></div>
+
+<section id="about" class="fade">
+ <h2>About <span>Me</span></h2>
+ <p class="sub">A snapshot of my journey, interests and goals.</p>
+ <div class="grid">
+  <div class="glass"><h3>🎓 Academic Journey</h3><p class="sub">I'm a third-year B.Tech student in Computer Science Engineering, specializing in Artificial Intelligence &amp; Machine Learning. I've built a foundation in C, Java and Python, and I'm now applying it to real machine-learning systems.</p></div>
+  <div class="glass"><h3>🧠 Interests</h3><p class="sub">Computer vision, machine learning and data science, especially applying AI to everyday problems like road safety. I also enjoy web development and turning ideas into clean, usable interfaces.</p></div>
+  <div class="glass"><h3>✨ Personality</h3><p class="sub">Curious, hands-on and persistent. I learn best by building, testing and improving, and I like explaining what I've built in simple terms.</p></div>
+  <div class="glass"><h3>🚀 Career Goals</h3><p class="sub">To grow into an AI/ML engineer who builds reliable, real-world intelligent systems, starting with projects and internships that deepen my skills in deep learning and computer vision.</p></div>
+ </div>
+</section>
+
+<section id="education" class="fade">
+ <h2><span>Education</span></h2>
+ <p class="sub">Academic background.</p>
+ <div class="grid">
+  <div class="glass"><h3>B.Tech — Computer Science Engineering</h3><p class="grad" style="font-weight:600">Specialization: Artificial Intelligence &amp; Machine Learning</p><p class="sub" style="margin:.6rem 0 0">Currently in 3rd year<span data-show="college"> · <span data-text="college"></span></span><span data-show="cgpa"> · CGPA: <span data-text="cgpa"></span></span></p></div>
+  <div class="glass"><h3>Focus Areas</h3><div class="chips"><span>Machine Learning</span><span>Computer Vision</span><span>Data Science</span><span>Python Programming</span><span>Databases (SQL)</span><span>Web Development</span></div></div>
+ </div>
+</section>
+
+<section id="skills" class="fade">
+ <h2>Technical <span>Skills</span></h2>
+ <p class="sub">Languages, web technologies and AI/ML tools I work with.</p>
+ <div class="grid" id="skillgrid"></div>
+</section>
+
+<section id="projects" class="fade">
+ <h2>Featured <span>Projects</span></h2>
+ <p class="sub">Click a card to expand details.</p>
+ <div class="grid">
+  <div class="glass proj feat open">
+   <div>
+    <span class="tag">Flagship Project</span>
+    <h3 style="font-size:1.6rem">AI-Based Road Damage Detection</h3>
+    <p class="sub" style="margin:.5rem 0">A computer-vision system that uses a YOLO object-detection model to identify road damage from images, aimed at making road inspection faster and more data-driven.</p>
+    <div class="chips"><span>Python</span><span>YOLO</span><span>Ultralytics</span><span>Computer Vision</span></div>
+    <div class="more"><p>Approach: road images are analysed by a YOLO model (via Ultralytics) that locates visible damage such as potholes and cracks. Built in a Python 3.11 environment. Status: in development, with evaluation results to be added once finalized.</p></div>
+    <p style="margin-top:1rem"><a class="btn p" data-link="github">View on GitHub ↗</a><span class="tag" data-hide="github">Repository link coming soon</span></p>
+   </div>
+   <div class="viz" style="flex-direction:column"><svg viewBox="0 0 320 200" width="100%" style="max-width:380px"><defs><linearGradient id="rg" x1="0" x2="1"><stop offset="0" stop-color="#4f8cff"/><stop offset="1" stop-color="#9b5cff"/></linearGradient></defs><path d="M120 0 L200 0 L300 200 L20 200Z" fill="#1b1d33" stroke="#33365a"/><path d="M160 0 V200" stroke="#6b6e92" stroke-dasharray="10 10"/><ellipse cx="170" cy="140" rx="30" ry="12" fill="#0b0b14"/><rect x="128" y="118" width="84" height="46" rx="6" fill="none" stroke="url(#rg)" stroke-width="3"/><rect x="128" y="100" width="64" height="18" rx="4" fill="url(#rg)"/><text x="136" y="113" fill="#fff" font-size="11" font-family="sans-serif">damage</text></svg><small>Illustration of the detection concept</small></div>
+  </div>
+  <div class="glass proj">
+   <h3>Personal Portfolio Website</h3><p class="sub">A responsive, animated developer portfolio with glassmorphism design, scroll animations and light/dark themes.</p>
+   <div class="chips"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+   <div class="more">Built from scratch with no frameworks: canvas particle background, interactive project cards, scroll-reveal animations and a print-ready resume.</div>
+   <p><a data-link="github">GitHub ↗</a><span class="sub" data-hide="github">Repository link coming soon</span></p>
+  </div>
+  <div class="glass proj">
+   <h3>More Projects Coming</h3><p class="sub">I'm continuing to build new AI/ML and data science projects. They will appear here as they are completed.</p>
+   <div class="chips"><span>Machine Learning</span><span>Data Science</span></div>
+   <div class="more">Next steps include deepening my work in deep learning and computer vision.</div>
+  </div>
+ </div>
+</section>
+
+<section id="achievements" class="fade">
+ <h2>Achievements &amp; <span>Milestones</span></h2>
+ <p class="sub">Highlights of my journey so far.</p>
+ <div class="grid" id="achgrid">
+  <div class="glass"><h3>🎯 AI/ML Specialization</h3><p class="sub">Pursuing B.Tech CSE with a specialization in Artificial Intelligence &amp; Machine Learning.</p></div>
+  <div class="glass"><h3>🛣️ Road Damage Detection</h3><p class="sub">Developing a YOLO-based computer-vision project with a Python and Ultralytics workflow.</p></div>
+  <div class="glass"><h3>🌐 Personal Portfolio</h3><p class="sub">Designed and built this responsive portfolio with HTML, CSS and JavaScript.</p></div>
+ </div>
+ <h2 style="margin-top:2.5rem;font-size:1.6rem"><span>Certifications</span></h2>
+ <div class="grid" id="certgrid" style="margin-top:1rem"></div>
+</section>
+
+<section id="resume" class="fade">
+ <h2><span>Resume</span></h2>
+ <div class="glass" style="text-align:center">
+  <p class="sub" style="margin:0 auto 1.2rem">Get a clean one-page resume generated from this portfolio. In the print dialog, choose "Save as PDF".</p>
+  <a class="btn p" id="rbtn" href="#">⬇ Download Resume</a>
+ </div>
+</section>
+
+<section id="contact" class="fade">
+ <h2>Get In <span>Touch</span></h2>
+ <p class="sub">Let's talk about opportunities, projects or ideas.</p>
+ <div class="two">
+  <div class="glass">
+   <p>Open to conversations about AI/ML projects, internships and collaboration.</p><br>
+   <p data-show="email">📧 <a data-link="email" data-text="email"></a></p>
+   <p data-show="linkedin">💼 <a data-link="linkedin">LinkedIn profile ↗</a></p>
+   <p data-show="github">💻 <a data-link="github">GitHub profile ↗</a></p>
+  </div>
+  <form class="glass" id="cform">
+   <input required placeholder="Your name"><input required type="email" placeholder="Your email"><textarea required rows="5" placeholder="Your message"></textarea>
+   <button class="btn p" type="submit">Send Message</button>
+   <p id="note" class="sub" style="margin:0"></p>
+  </form>
+ </div>
+</section>
+
+<footer>
+ <div class="soc"><a data-link="github" aria-label="GitHub">GH</a><a data-link="linkedin" aria-label="LinkedIn">in</a><a data-link="email" aria-label="Email">@</a></div>
+ <p>Thanks for visiting. Let's build something intelligent together.</p>
+ <p style="font-size:.85rem;margin-top:.4rem">© <span id="yr"></span> S.M. Basit Ali. All rights reserved.</p>
+</footer>
+
+<div id="rp"><h1>S.M. Basit Ali</h1><p>B.Tech Computer Science Engineering (AI &amp; ML) · 3rd Year<span data-show="email"> · <span data-text="email"></span></span></p>
+<h2>Education</h2><p>B.Tech, Computer Science Engineering. Specialization: Artificial Intelligence &amp; Machine Learning (currently 3rd year)<span data-show="college">, <span data-text="college"></span></span></p>
+<h2>Technical Skills</h2><p>Python, C, Java, HTML, CSS, JavaScript, SQL, Machine Learning, Data Science</p>
+<h2>Projects</h2><ul><li><b>AI-Based Road Damage Detection</b>: YOLO (Ultralytics) computer-vision project in Python to detect road damage from images.</li><li><b>Personal Portfolio Website</b>: responsive site built with HTML, CSS and JavaScript.</li></ul></div>
+
+<script src="script.js"></script>
+</body>
+</html>
